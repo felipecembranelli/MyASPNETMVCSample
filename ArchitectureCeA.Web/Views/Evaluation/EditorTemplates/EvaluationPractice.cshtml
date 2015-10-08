@@ -1,0 +1,59 @@
+﻿@model ArchitectureCeA.Model.EvaluationPractice
+
+
+@*Receber somente um objeto:
+
+@model Participant
+<p>
+    @Html.TextBoxFor(x => x.FirstName)
+</p>
+<p>
+    @Html.TextBoxFor(x => x.LastName)
+</p>
+
+http://stackoverflow.com/questions/14480845/how-to-post-data-from-partial-view-in-asp-net-mvc3*@
+
+<table class="table">
+    <tr>
+        <th>
+            Practice1
+        </th>
+        <th>
+            Color
+        </th>
+        <th>Requirement</th>
+        <th>Note</th>
+        <th>Action Plan</th>
+    </tr>
+    <tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.EvaluationPracticeId)
+            </td>
+            <td>
+                @Html.TextAreaFor(model => model.EvaluationPracticeStatus, 100, 40, new { @class = "rte-zone" })
+            </td>
+            <td>
+                <ul>
+                    @foreach (var requirements in Model.Practice.PracticeRequirement)
+                    {
+                        <li>@Html.DisplayFor(modelItem => requirements.RequirementDescription)</li>
+                    }
+                </ul>
+            </td>
+            <td>
+                @Html.TextAreaFor(model => model.EvaluationPracticeNote, 100, 40, new { @class = "rte-zone" })
+            </td>
+            <td>
+                <ul>
+                    <textarea cols="40" rows="5" name="myname" class="rte-zone">
+                        @foreach (var actions in Model.ActionPlan)
+                        {
+                            @Html.Raw(actions.ActionPlanDescription)
+                        }
+                    </textarea>
+                    
+                </ul>
+            </td>
+        </tr>
+    </table>

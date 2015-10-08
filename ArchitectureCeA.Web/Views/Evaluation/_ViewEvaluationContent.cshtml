@@ -1,0 +1,48 @@
+﻿@model IEnumerable<ArchitectureCeA.Model.EvaluationPractice>
+
+    <table class="table">
+        <tr>
+            <th>
+                Practice1
+            </th>
+            <th>
+                Color
+            </th>
+            <th>Requirement</th>
+            <th>Note</th>
+            <th>Action Plan</th>
+        </tr>
+        <tr>
+
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Practice.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EvaluationPracticeStatus)
+                </td>
+                <td>
+                    <ul>
+                        @foreach (var requirements in item.Practice.PracticeRequirement)
+                        {
+                            <li>@Html.DisplayFor(modelItem => requirements.RequirementDescription)</li>
+                        }
+                    </ul>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EvaluationPracticeNote)
+                </td>
+                <td>
+                    <ul>
+                        @foreach (var actions in item.ActionPlan)
+                        {
+                            <li>@Html.DisplayFor(modelItem => actions.ActionPlanDescription)</li>
+                        }
+                    </ul>
+                </td>
+            </tr>
+            }
+
+        </table>

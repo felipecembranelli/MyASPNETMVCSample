@@ -1,0 +1,37 @@
+﻿@model ArchitectureCeA.Web.ViewModels.EvaluationVM
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Architecture PDCA</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div id="container">
+        @Html.HiddenFor(model => model.EvaluationId)
+        @Html.HiddenFor(model => model.PerspectiveId)
+        @Html.Hidden("EditMode", "true")
+        <ul class="tabs">
+            <li class="active" rel="tab1">Architecture Delivery</li>
+            <li rel="tab2">Architecture Definition and Evaluation</li>
+            <li rel="tab3">Architecture Management</li>
+        </ul>
+        <div id="tab1" class="tab_content">
+            @Html.EditorFor(model => model.EvaluationPractice);
+            @*@Html.Partial("_EditEvaluationContent", Model.EvaluationPractice)*@
+        </div>
+
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+
+    </div> <!-- #container -->
+}

@@ -1,0 +1,45 @@
+﻿@model IEnumerable<ArchitectureCeA.Web.ViewModels.PracticeRequirementViewModel>
+
+@{
+    ViewBag.Title = "Requirements";
+}
+
+<div class="well span12">
+    @{
+        string practiceName = (ViewBag.Practice as ArchitectureCeA.Model.Practice).Name;
+    }
+
+    <h2>Requirements of @practiceName</h2>
+
+    <p>
+
+        @Html.ActionLink("Create New", "Create", new { practiceId = (ViewBag.Practice as ArchitectureCeA.Model.Practice).Id })
+
+
+    </p>
+
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.RequirementDescription)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RequirementDescription)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Id, practiceId = item.PracticeId }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.Id, practiceId = item.PracticeId }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id, practiceId = item.PracticeId })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    @Html.ActionLink("Back to Practice", "Index", "Practice", new { (ViewBag.Practice as ArchitectureCeA.Model.Practice).PerspectiveId }, null)
+</div>

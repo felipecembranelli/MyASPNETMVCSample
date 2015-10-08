@@ -1,0 +1,53 @@
+﻿@model dynamic
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architecture Evaluation Tool</title>
+
+    @Styles.Render("~/Content/CSS")
+
+
+</head>
+<body>
+    <div class="navbar navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <section id="login">
+                    @Html.Partial("_Header")
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid margin-top">
+        <div class="row-fluid">
+            <div class="span9">
+                @RenderBody()
+            </div>
+            <div class="span3">
+                <div id="mygoals" class="well">
+                    <h5>
+                        MY Evaluations
+                    </h5>
+                    <div>
+                        @*@{ Html.RenderAction("MyGoals", "Goal"); }*@
+                    </div>
+                    @*</fieldset>*@
+                </div>
+            </div>
+        </div>
+    </div>
+        <div id="errorStatusBar">
+
+        </div>
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @Scripts.Render("~/bundles/RichTextEditor")
+        @Scripts.Render("~/bundles/Tab")
+        @RenderSection("scripts", required: false)
+
+        <script type="text/javascript">
+            $('.rte-zone').rte("css url", "toolbox images url");
+        </script>
+</body>
+</html>

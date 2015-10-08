@@ -1,0 +1,25 @@
+﻿@model ArchitectureCeA.Web.ViewModels.PracticeRequirementViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Requirement</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RequirementDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RequirementDescription)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id, practiceId = Model.PracticeId }) |
+    @Html.ActionLink("Back to Requirements", "Index", "PracticeRequirement", new { practiceId = Model.PracticeId }, null)
+</p>

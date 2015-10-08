@@ -1,0 +1,36 @@
+﻿@model ArchitectureCeA.Web.ViewModels.PracticeViewModel
+
+@{
+    ViewBag.Title = "Practices";
+}
+
+<div class="well span12">
+    <h2>Practices</h2>
+
+    <div>
+        <h4>Details</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+
+            <dd>
+                @Html.Raw(Model.Description)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id, perspectiveId = Model.PerspectiveId }) |
+        @Html.ActionLink("Back to Practices", "Index", "Practice", new { id = Model.Id, perspectiveId = Model.PerspectiveId }, null)
+    </p>
+</div>

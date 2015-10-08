@@ -1,0 +1,7 @@
+C:\Users\feliperc\OneDrive\Public\Estudo\Pilot\ArchitectureCeA.Web\ArchitectureCeA.Database\bin\Debug\ArchitectureCeA.Database.dacpac
+C:\Users\feliperc\OneDrive\Public\Estudo\Pilot\ArchitectureCeA.Web\ArchitectureCeA.Database\obj\Debug\Model.xml
+C:\Users\feliperc\OneDrive\Public\Estudo\Pilot\ArchitectureCeA.Web\ArchitectureCeA.Database\obj\Debug\refactor.xml
+C:\Users\feliperc\OneDrive\Public\Estudo\Pilot\ArchitectureCeA.Web\ArchitectureCeA.Database\obj\Debug\postdeploy.sql
+C:\Users\feliperc\OneDrive\Public\Estudo\Pilot\ArchitectureCeA.Web\ArchitectureCeA.Database\obj\Debug\predeploy.sql
+C:\Users\feliperc\OneDrive\Public\Estudo\Pilot\ArchitectureCeA.Web\ArchitectureCeA.Database\obj\Debug\ArchitectureCeA.Database.dll
+C:\Users\feliperc\OneDrive\Public\Estudo\Pilot\ArchitectureCeA.Web\ArchitectureCeA.Database\obj\Debug\ArchitectureCeA.Database.pdb

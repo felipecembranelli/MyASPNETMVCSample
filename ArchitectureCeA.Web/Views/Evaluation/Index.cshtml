@@ -1,0 +1,20 @@
+﻿@model ArchitectureCeA.Web.ViewModels.EvaluationVM
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Architecture PDCA</h2>
+
+<div id="container">
+    @Html.Hidden("EditMode", "false")
+    <ul class="tabs">
+        <li class="active" rel="tab1">Architecture Delivery</li>
+        <li rel="tab2">Architecture Definition and Evaluation</li>
+        <li rel="tab3">Architecture Management</li>
+    </ul>
+    <div id="tab1" class="tab_content">
+        @Html.Partial("_ViewEvaluationContent")
+    </div>
+
+</div> <!-- #container -->

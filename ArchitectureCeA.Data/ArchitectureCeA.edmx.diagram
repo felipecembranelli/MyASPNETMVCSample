@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0322258b4edd4f4cbc81049a20a12483" Name="Diagram1">
+        <EntityTypeShape EntityType="ArchitectureCeAModel.ActionPlan" Width="1.5" PointX="8.375" PointY="2.75" />
+        <EntityTypeShape EntityType="ArchitectureCeAModel.Evaluation" Width="1.5" PointX="7.125" PointY="5.625" />
+        <EntityTypeShape EntityType="ArchitectureCeAModel.EvaluationPractice" Width="2.125" PointX="5.25" PointY="2.375" />
+        <EntityTypeShape EntityType="ArchitectureCeAModel.Practice" Width="1.5" PointX="3" PointY="2.5" />
+        <EntityTypeShape EntityType="ArchitectureCeAModel.PracticeRequirement" Width="1.5" PointX="3" PointY="5.75" />
+        <EntityTypeShape EntityType="ArchitectureCeAModel.ProcessPerspective" Width="1.5" PointX="0.75" PointY="2.75" />
+        <AssociationConnector Association="ArchitectureCeAModel.FK_EvaluationPractice_ID_2" />
+        <AssociationConnector Association="ArchitectureCeAModel.FK_Evaluation_ID" />
+        <AssociationConnector Association="ArchitectureCeAModel.FK_EvaluationPractice_ID" />
+        <AssociationConnector Association="ArchitectureCeAModel.FK_PERSPECTIVE_ID_2" />
+        <AssociationConnector Association="ArchitectureCeAModel.FK_Practice_ID_2" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
